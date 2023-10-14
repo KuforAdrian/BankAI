@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"   fx:controller="sample.Controller" >
+<left>
+    <AnchorPane prefHeight="600.0" prefWidth="303.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+        <children>
+            <Text fill="WHITE" layoutX="40.0" layoutY="325.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to BankAI">
+                <font>
+                    <Font name="System Bold" size="21.0" />
+                </font>
+            </Text>
+        </children>
+    </AnchorPane>
+</left>
+<right>
+    <AnchorPane prefHeight="600.0" prefWidth="403.0" BorderPane.alignment="CENTER">
+        <fx:define>
+            <ToggleGroup fx:id="group"/>
+        </fx:define>
+        <children>
+            <TextField fx:id="firstName" layoutX="80.0" layoutY="169.0" prefHeight="31.0" prefWidth="285.0" promptText="First Name" style="-fx-border-color: black; -fx-border-radius: 30px;" />
+            <TextField fx:id="lastName" layoutX="80.0" layoutY="224.0" prefHeight="33.0" prefWidth="285.0" promptText="Last Name" style="-fx-border-color: black; -fx-border-radius: 30px;" />
+            <TextField fx:id="phoneNumber" layoutX="76.0" layoutY="284.0" prefHeight="33.0" prefWidth="288.0" promptText="Phone Number" style="-fx-border-color: black; -fx-border-radius: 30px;" />
+            <PasswordField fx:id="password" layoutX="82.0" layoutY="341.0" prefHeight="33.0" prefWidth="284.0" promptText="Password" style="-fx-border-color: black; -fx-border-radius: 30px;" />
+            <RadioButton layoutX="104.0" layoutY="397.0" mnemonicParsing="false" text="Savings Account"  toggleGroup="$group"/>
+            <RadioButton  layoutX="104.0" layoutY="431.0" mnemonicParsing="false" text="Current Account" toggleGroup="$group" />
+            <Button onAction="#handleSignUp" layoutX="272.0" layoutY="426.0" mnemonicParsing="false" text="SignUp" />
+            <Text layoutX="21.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" wrappingWidth="194.75" />
+            <Hyperlink layoutX="220.0" layoutY="515.0" text="SignIn" />
+        </children>
+    </AnchorPane>
+</right>
+</BorderPane>
